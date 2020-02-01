@@ -1,8 +1,8 @@
 Arguments: 
-  C:\App\win-dev-tools\bin\nodejs\node.exe C:\App\win-dev-tools\bin\nodejs\node_modules\yarn\bin\yarn.js add @smartweb/vue-flash-message
+  C:\App\win-dev-tools\bin\nodejs\node.exe C:\App\win-dev-tools\bin\nodejs\node_modules\yarn\bin\yarn.js add vue-flash-message
 
 PATH: 
-  C:\Users\user\AppData\Local\Temp\yarn--1580569902705-0.5266359780374354;C:\App\github\local-server-tools\node_modules\.bin;C:\Users\user\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Users\user\AppData\Local\Yarn\bin;C:\App\win-dev-tools\bin\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\App\win-dev-tools\bin\lib\node_modules\npm\bin\node-gyp-bin;C:\App\win-dev-tools\bin\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\user\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\App\win-dev-tools\bin;C:\App\win-dev-tools\bin\nodejs;C:\App\win-dev-tools\bin\php-7.3.8;C:\Go\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\HashiCorp\Vagrant\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\App\win-dev-tools\bin;C:\App\win-dev-tools\bin\nodejs;C:\App\win-dev-tools\bin\php-7.3.8;C:\Go\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\go\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Oracle\VirtualBox:C:\App\github\local-server-tools\node_modules\yarn\bin
+  C:\Users\user\AppData\Local\Temp\yarn--1580575460757-0.4097489344166316;C:\App\github\local-server-tools\node_modules\.bin;C:\Users\user\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Users\user\AppData\Local\Yarn\bin;C:\App\win-dev-tools\bin\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\App\win-dev-tools\bin\lib\node_modules\npm\bin\node-gyp-bin;C:\App\win-dev-tools\bin\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\user\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\App\win-dev-tools\bin;C:\App\win-dev-tools\bin\nodejs;C:\App\win-dev-tools\bin\php-7.3.8;C:\Go\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\HashiCorp\Vagrant\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\App\win-dev-tools\bin;C:\App\win-dev-tools\bin\nodejs;C:\App\win-dev-tools\bin\php-7.3.8;C:\Go\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\go\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Oracle\VirtualBox:C:\App\github\local-server-tools\node_modules\yarn\bin
 
 Yarn version: 
   1.21.1
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, lstat 'C:\App\github\local-server-tools\node_modules\sass'
+  Error: ENOENT: no such file or directory, open 'C:\App\github\local-server-tools\node_modules\static-module\node_modules\.bin\escodegen.cmd'
 
 npm manifest: 
   {
@@ -33,10 +33,12 @@ npm manifest:
       "@mdx-js/mdx": "^1.5.1",
       "@mdx-js/react": "^1.5.1",
       "@mdx-js/tag": "^0.20.3",
+      "@smartweb/vue-flash-message": "0.5.3",
       "@vue/component-compiler-utils": "^3.0.2",
       "babel-plugin-react-require": "^3.1.1",
       "babel-plugin-transform-zero-dirname-filename": "^1.1.1-alpha.0",
       "bulma": "0.8.0",
+      "clipboard": "2.0.4",
       "cssnano": "^4.1.10",
       "moment": "2.24.0",
       "react": "^16.11.0",
@@ -50,14 +52,16 @@ npm manifest:
       "vue-meta": "^1.6.0",
       "vue-template-compiler": "^2.6.10",
       "zero": "^1.1.19",
-      "clipboard": "2.0.4",
-      "@smartweb/vue-flash-message": "0.5.3"
+      "vue-flash-message": "0.7.2"
     },
     "alias": {
       "react-dom": "@hot-loader/react-dom"
     },
     "scripts": {
       "start": "zero webroot"
+    },
+    "devDependencies": {
+      "sass": "^1.25.0"
     }
   }
 
@@ -1014,6 +1018,11 @@ Lockfile:
     dependencies:
       "@parcel/utils" "^1.11.0"
       physical-cpu-count "^2.0.0"
+  
+  "@smartweb/vue-flash-message@0.5.3":
+    version "0.5.3"
+    resolved "https://registry.yarnpkg.com/@smartweb/vue-flash-message/-/vue-flash-message-0.5.3.tgz#298dacb5d20a491385bfe143eed8f4c3fb3d549f"
+    integrity sha512-zUD2fldXw+MaxXe0JVeES/5xXK5FDHiuWqRqjnp7krR45fTf2EePpj8EUNmbcBA38FLbM528vdirAyR3ZepQTQ==
   
   "@types/q@^1.5.1":
     version "1.5.2"

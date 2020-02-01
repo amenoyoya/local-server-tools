@@ -16,6 +16,7 @@
             <emoji :title="emoji.title" :str="emoji.str" :code="emoji.code" />
           </div>
         </div>
+        <FlashMessage></FlashMessage>
       </div>
     </section>
   </body>
@@ -26,10 +27,19 @@
 import 'bulma'
 import Vue from 'vue'
 import {VueMasonryPlugin} from 'vue-masonry'
+import FlashMessage from '@smartweb/vue-flash-message'
 import emoji from './emoji'
 
 // vue-masonry 利用
 Vue.use(VueMasonryPlugin)
+
+// FlashMessage利用
+Vue.use(FlashMessage, {
+  name: '$flashMessage',
+  tag: 'FlashMessage',
+  time: 3000, // 3秒表示
+  icon: true
+})
 
 export default {
   data() {

@@ -4,9 +4,8 @@
     <div class="panel-block">
       <div class="field">
         <label class="label">{{ code }}</label>
-        <FlashMessage></FlashMessage>
         <div class="controll is-center">
-          <button class="button is-button is-size-3 copy-button" :data-clipboard-text="str">
+          <button class="button is-button is-size-3 copy-button" @click.prevent="copyText(str)">
             {{ str }}
           </button>
         </div>
@@ -16,41 +15,35 @@
 </template>
 
 <script>
-const ClipboardJS = require('clipboard/dist/clipboard.min.js')
-import Vue from 'vue'
-import FlashMessage from '@smartweb/vue-flash-message'
-
-Vue.use(FlashMessage, {
-  name: '$flashMessage',
-  tag: 'FlashMessage',
-  time: 8000,
-  icon: true
-})
+/**
+ * function: クリップボードに text コピー
+ * 1. textarea要素を作成し、value に text セット
+ * 2. textarea要素を document.body に追加
+ * 3. textarea要素を選択状態にする
+ * 4. execCommand: copy を実行
+ * 5. textarea要素を削除
+ */
+const copyToClipboard = text => {
+  const elem = document.createElement('textarea')
+  elem.value =text
+  document.body.appendChild(elem)
+  elem.select()
+  document.execCommand('copy')
+  document.body.removeChild(elem)
+} 
 
 export default {
   props: ['title', 'str', 'code'],
-  data() {
-    return {
-      // ClipboardJSインスタンス
-      clipboard: new ClipboardJS('.copy-button')
-    }
-  },
-  mounted() {
-    const vue = this;
-    // クリップボードイベント準備
-    vue.clipboard.on('success', e => {
-      e.clearSelection()
-
-      vue.$flashMessage.show({
+  methods: {
+    // 絵文字コピー
+    copyText(text) {
+      copyToClipboard(text)
+      this.$flashMessage.show({
         status: 'success',
         title: 'Emoji Copied',
-        message: e.text + ' is copied !'
+        message: text + ' is copied !'
       })
-    })
-    vue.clipboard.on('error', e => {
-      console.log('Action:', e.action)
-      console.log('Trigger:', e.trigger)
-    })
+    }
   }
 }
 </script>
