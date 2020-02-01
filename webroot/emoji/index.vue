@@ -11,7 +11,7 @@
       <div class="container">
         <h1 class="title">gitemoji</h1>
         <p class="subtitle">Gitで使う絵文字テンプレート</p>
-        <div class="tile is-parent" v-masonry transition-duration="0.3s" gutter="20">
+        <div class="tile is-parent" v-masonry transition-duration="0.3s" gutter="10">
           <div class="tile is-child" v-masonry-tile v-for="(emoji, index) in emojis" :key="'emoji_' + index">
             <emoji :title="emoji.title" :str="emoji.str" :code="emoji.code" />
           </div>
@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 .tile {
   &.is-child {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 }
 </style>

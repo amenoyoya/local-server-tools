@@ -5,7 +5,9 @@
       <div class="field">
         <label class="label">{{ code }}</label>
         <div class="controll is-center">
-          <button class="button is-button is-size-3">{{ str }}</button>
+          <button class="button is-button is-size-3 copy-button" :data-clipboard-text="str">
+            {{ str }}
+          </button>
         </div>
       </div>
     </div>
@@ -13,8 +15,29 @@
 </template>
 
 <script>
+const ClipboardJS = require('clipboard/dist/clipboard.min.js')
+
 export default {
-  props: ['title', 'str', 'code']
+  props: ['title', 'str', 'code'],
+  data() {
+    return {
+      // ClipboardJSインスタンス
+      clipboard: new ClipboardJS('.copy-button')
+    }
+  },
+  mounted() {
+    // クリップボードイベント準備
+    this.clipboard.on('success', e => {
+      console.log('Action:', e.action)
+      console.log('Text:', e.text)
+      console.log('Trigger:', e.trigger)
+      e.clearSelection()
+    })
+    this.clipboard.on('error', e => {
+      console.log('Action:', e.action)
+      console.log('Trigger:', e.trigger)
+    })
+  }
 }
 </script>
 
