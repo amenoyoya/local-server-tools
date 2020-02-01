@@ -6,35 +6,39 @@
   "author": "amenoyoya <mtyswe3@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "zero": "^1.1.19",
     "@babel/core": "^7.2.2",
-    "@babel/runtime": "^7.3.1",
-    "regenerator-runtime": "^0.12.0",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
-    "babel-plugin-transform-zero-dirname-filename": "^1.1.1-alpha.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
-    "cssnano": "^4.1.10",
+    "@babel/runtime": "^7.3.1",
     "@hot-loader/react-dom": "^16.8.1",
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
+    "@mdx-js/tag": "^0.20.3",
+    "@vue/component-compiler-utils": "^3.0.2",
     "babel-plugin-react-require": "^3.1.1",
+    "babel-plugin-transform-zero-dirname-filename": "^1.1.1-alpha.0",
+    "bulma": "0.8.0",
+    "cssnano": "^4.1.10",
+    "moment": "2.24.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet-async": "^1.0.4",
     "react-hot-loader": "^4.12.15",
-    "@mdx-js/react": "^1.5.1",
-    "@mdx-js/tag": "^0.20.3",
-    "@mdx-js/mdx": "^1.5.1",
+    "regenerator-runtime": "^0.12.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3",
+    "vue-masonry": "^0.11.8",
     "vue-meta": "^1.6.0",
     "vue-template-compiler": "^2.6.10",
-    "@vue/component-compiler-utils": "^3.0.2",
-    "moment": "2.24.0",
-    "bulma": "0.8.0"
+    "zero": "^1.1.19"
   },
   "alias": {
     "react-dom": "@hot-loader/react-dom"
   },
   "scripts": {
     "start": "zero webroot"
+  },
+  "devDependencies": {
+    "sass": "^1.25.0"
   }
 }
