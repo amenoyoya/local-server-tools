@@ -60,6 +60,7 @@ export default {
         { title: 'wip', str: "🚧", code: ":construction:" },
         { title: 'document', str: "📚", code: ":books:" },
         { title: 'release', str: "🔖", code: ":bookmark:" },
+        { title: 'revert', str: "⌛", code: ":hourglass:" },
       ]
     }
   },
