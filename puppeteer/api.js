@@ -34,11 +34,29 @@ const getPage = async () => {
     process.exit(1);
   }
   // ページ取得
+  let page;
   try {
-    
+    page = await browser.newPage();
+    page.setDefaultNavigationTimeout(5000); // タイムアウト: 5秒
+    puppeteerReLaunchCounter = 0; // 再起動カウンタをリセット
+
+    const pages = await browser.pages();
+    console.log(`page_count: ${pages.length}`);
+    if (pages.length > 5) {
+      throw new Error('Too many pages');
+    }
+  } catch (err) {
+    puppeteerReLaunchCounter++;
+    console.log(`Cannot create page. Try relaunch... Error: ${err.stack}`);
+    // ブラウザ再起動してページ取得
+    await browser.close();
+    await launchPuppeteer();
+    page = await getPage();
   }
+  return page;
 };
 
 module.exports = {
-
+  launchPuppeteer: launchPuppeteer,
+  getPage: getPage
 }
