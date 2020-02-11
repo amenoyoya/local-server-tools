@@ -6,6 +6,9 @@ ARG UID
 # Projectディレクトリ
 ARG PRJDIR=/home/node/
 
+# package.json を作業ディレクトリにコピー
+COPY package.json $PRJDIR
+
 RUN : 'puppeteer用の各種パッケージ導入' && \
     apk add --no-cache chromium nss freetype freetype-dev harfbuzz ca-certificates ttf-freefont && \
     : 'nodeユーザIDをDocker実行ユーザIDと合わせる' && \
@@ -23,9 +26,6 @@ USER node
 # 作業ディレクトリ: $PRJDIR
 ## $PRJDIR/app/ => host://./app/
 WORKDIR $PRJDIR
-
-# package.json を作業ディレクトリにコピー
-COPY package.json $PRJDIR
 
 RUN : 'install node_modules' && \
     yarn install && \
