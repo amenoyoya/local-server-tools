@@ -39,7 +39,7 @@
     "react-dom": "@hot-loader/react-dom"
   },
   "scripts": {
-    "start": "zero webroot"
+    "start": "zero app"
   },
   "devDependencies": {
     "sass": "^1.25.0"
