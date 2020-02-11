@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>gitemoji</title>
+    <title>GitEmoji</title>
   </head>
   <body>
     <section class="section">
       <div class="container">
         <h1 class="title">gitemoji</h1>
-        <p class="subtitle">Gitで使う絵文字テンプレート</p>
+        <p class="subtitle">Gitで commit するときに使う絵文字テンプレート</p>
         <div class="tile is-parent" v-masonry transition-duration="0.3s" gutter="10">
           <div class="tile is-child" v-masonry-tile v-for="(emoji, index) in emojis" :key="'emoji_' + index">
             <emoji :title="emoji.title" :str="emoji.str" :code="emoji.code" />
