@@ -1,4 +1,4 @@
-# local-server-tools
+# zero-server-tools
 
 ローカルサーバで動作するちょっとしたツール類
 

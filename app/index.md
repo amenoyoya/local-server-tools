@@ -11,7 +11,7 @@
 
 ## WEB App
 
-- GitHub: https://github.com/amenoyoya/local-server-tools
+- GitHub: https://github.com/amenoyoya/zero-server-tools
 
 ### 公開済みアプリケーション
 - GitEmoji: [/gitemoji/](/gitemoji/)
